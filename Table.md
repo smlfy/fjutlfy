@@ -65,3 +65,25 @@ Table I: Experimental comparison between real OOD samples and synthetic OOD samp
 | Synthetic OOD samples | 1.29/99.65 | 17.60/95.89 | 31.91/92.13 | 42.15/90.51 | 23.24/94.55 |
 | Real OOD samples | 1.73/99.28 | 6.55/98.67 | 18.51/95.69 | 22.64/95.35 | **12.36/97.25** |
 
+Table J: Performance comparison between SD model and DiT models in the DualCnst method.
+| SD model | iNaturalist | SUN | Places | Texture | Average |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+|  | FPR95/AUROC | FPR95/AUROC | FPR95/AUROC | FPR95/AUROC | FPR95/AUROC |
+| SD1. 5 | 1.29/99.65 | 17.60/95.89 | 31.91/92.13 | 42.15/90.51 | 23.24/**94.55** |
+| Hunyuan-DiT | 1.51 & 99.62 | 17.55 & 95.95 | 31.24 & 92.18 | 42.46 & 90.37 | **23.19 &** 94.53 |
+
+Table K: Experimental comparison under generated image style shifts. ID dataset: ImageNet-1k.
+| Image Style (Method) | iNaturalist | SUN | Places | Texture | Average |
+| :---: | ----- | ----- | ----- | ----- | ----- |
+|  | FPR95/AUROC | FPR95/AUROC | FPR95/AUROC | FPR95/AUROC | FPR95/AUROC |
+| Natural Images (DualCnst) | 1.29/99.65 | 17.60/95.89 | 31.91/92.13 | 42.15/90.51 | **23.24/94.55** |
+| Oil Painting Images (DualCnst) ） | 1.31/99.65 | 17.73/95.79 | 32.18/92.00 | 44.10/90.04 | 23.83/94.37 |
+| NegLabel | 1.91/99.49 | 20.53/95.49 | 35.59/91.64 | 43.56/90.22 | 25.40/94.21 |
+
+Table L: OOD Detection Experiments on Remote Sensing Data.
+| Method | AID |
+| :---: | :---: |
+|  | FPR95/AUROC |
+| NegLabel | 97.98/62.46 |
+| DualCnst(ours) | **97.19/66.11** |
+
